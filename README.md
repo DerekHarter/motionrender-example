@@ -75,7 +75,7 @@ load the dataset and plot a frame of the
 joint position data.  The basic motion capture
 frame for this dataset looks like the following:
 
-![Single frame of joint capture time series](./subject-skeleton.png")
+![Single frame of joint capture time series](./subject-skeleton.png)
 
 To render an visualization (animated movie)
 of the time series of data collected,
