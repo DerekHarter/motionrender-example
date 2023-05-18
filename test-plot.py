@@ -1,22 +1,28 @@
 #!/usr/bin/env python
-from motionrender.util import load_data
-from motionrender.plot import plot_joint_frame
+from motionrender import MotionRender
 
-
-time_series_file = "data/joint-time-series.csv"
-joint_graph_file = "data/joint-graph.csv"
-
-figure = "subject-skeleton.png"
-
+# example of rendering a captured frame from the standing subject
+time_series_file = "data/standing-subject.csv"
+joint_graph_file = "data/standing-joint-graph.csv"
+figure = "standing-subject.png"
 
 # load and parse the time series and defined joint graph of the data
-time_df, joint_graph, joint_names = load_data(time_series_file, joint_graph_file)
+# and plot the frame captured at the given time stamp
+mr = MotionRender(time_series_file, joint_graph_file)
+time_stamp = 1636576712852000
+mr.render_frame(time_stamp, figure_name=figure)
 
-# select the 2000th time series frame to plot
-joint_frame = time_df.iloc[2000]
 
-# create a figure of the selected time series frame
-fig = plot_joint_frame(joint_frame, joint_graph, joint_names)
+# example of rendering a frame of the sitting subject
+time_series_file = "data/sitting-subject.csv"
+joint_graph_file = "data/sitting-joint-graph.csv"
+figure = "sitting-subject.png"
 
-# save the figure
-fig.savefig(figure)
+# for this subject, demonstrate modifying some of
+# the plotting parameters that control how the figure
+# is rendered
+mr = MotionRender(time_series_file, joint_graph_file)
+mr._ax_elevation = -100
+mr._ax_azimuth = 70
+time_stamp = 1636576712885000
+mr.render_frame(time_stamp, figure_name=figure, figsize=(10,20))

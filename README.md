@@ -23,7 +23,7 @@ matplotlib and pandas packages.  You can install
 them using your user python package manager, for example
 
 ```
-$ sudo pip install matpltlib pandas
+$ sudo pip install matplotlib pandas
 ```
 
 You will need ffmpeg or some other movie rendering backend
@@ -44,9 +44,9 @@ your default python3 local packages
 ```
 $ sudo pip install motionrender
 Collecting motionrender
-  Downloading motionrender-0.1.0-py3-none-any.whl (17 kB)
+  Downloading motionrender-0.2.0-py3-none-any.whl (17 kB)
 Installing collected packages: motionrender
-Successfully installed motionrender-0.1.0
+Successfully installed motionrender-0.2.0
 
 ```
 
@@ -75,7 +75,7 @@ load the dataset and plot a frame of the
 joint position data.  The basic motion capture
 frame for this dataset looks like the following:
 
-![Single frame of joint capture time series](./subject-skeleton.png)
+![Single frame of joint capture time series](./standing-subject.png)
 
 To render an visualization (animated movie)
 of the time series of data collected,

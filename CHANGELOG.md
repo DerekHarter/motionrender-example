@@ -13,3 +13,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   of the motion capture time series.
 - Basic example of using the motionrender library to create a movie visualization
   of the full motion capture time series.
+
+## [0.2.0] - 2023-05-18
+
+### Added
+
+- Updated to version 0.2.0 of the motioncapture library.
+- updated examples to use object interface.
+- Added an additional set of motion capture data.
